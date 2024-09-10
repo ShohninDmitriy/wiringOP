@@ -5704,37 +5704,37 @@ unsigned int readR(unsigned int addr)
 
 			// gpio
 			if(mmap_base == A310B_GPIO_BASE_GROUP0)
-				val = *((unsigned int *) (a310b_gpio_info_t.gpio_base_group0 + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.gpio_base_group0 + mmap_seek));
 			else if(mmap_base == A310B_GPIO_BASE_GROUP1)
-				val = *((unsigned int *) (a310b_gpio_info_t.gpio_base_group1 + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.gpio_base_group1 + mmap_seek));
 			else if(mmap_base == A310B_GPIO_BASE_GROUP2)
-				val = *((unsigned int *) (a310b_gpio_info_t.gpio_base_group2 + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.gpio_base_group2 + mmap_seek));
 			else if(mmap_base == A310B_GPIO_BASE_GROUP3)
-				val = *((unsigned int *) (a310b_gpio_info_t.gpio_base_group3 + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.gpio_base_group3 + mmap_seek));
 			else if(mmap_base == A310B_GPIO_BASE_GROUP4)
-				val = *((unsigned int *) (a310b_gpio_info_t.gpio_base_group4 + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.gpio_base_group4 + mmap_seek));
 			else if(mmap_base == 0x160000)
-				val = *((unsigned int *) (a310b_gpio_info_t.gpio_base_group5 + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.gpio_base_group5 + mmap_seek));
 			else if(mmap_base == 0x150000)
-				val = *((unsigned int *) (a310b_gpio_info_t.gpio_base_group7 + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.gpio_base_group7 + mmap_seek));
 			// iomux
 			else if(mmap_base == A310B_IOMUX_BASE_GROUP0)
-				val = *((unsigned int *) (a310b_gpio_info_t.iomux_base_group0 + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.iomux_base_group0 + mmap_seek));
 			else if(mmap_base == A310B_IOMUX_BASE_GROUP1)
-				val = *((unsigned int *) (a310b_gpio_info_t.iomux_base_group1 + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.iomux_base_group1 + mmap_seek));
 			else if(mmap_base == A310B_IOMUX_BASE_GROUP2)
-				val = *((unsigned int *) (a310b_gpio_info_t.iomux_base_group2 + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.iomux_base_group2 + mmap_seek));
 			else if(mmap_base == A310B_IOMUX_BASE_GROUP3)
-				val = *((unsigned int *) (a310b_gpio_info_t.iomux_base_group3 + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.iomux_base_group3 + mmap_seek));
 			else if(mmap_base == A310B_IOMUX_BASE_GROUP4)
-				val = *((unsigned int *) (a310b_gpio_info_t.iomux_base_group4 + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.iomux_base_group4 + mmap_seek));
 			else if(mmap_base == 0x1d0000)
-				val = *((unsigned int *) (a310b_gpio_info_t.iomux_base_group5 + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.iomux_base_group5 + mmap_seek));
 			else if(mmap_base == 0x140000)
-				val = *((unsigned int *) (a310b_gpio_info_t.iomux_base_group7 + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.iomux_base_group7 + mmap_seek));
 			// pwm
 			else if(mmap_base == A310B_PWM_BASE)
-				val = *((unsigned int *) (a310b_gpio_info_t.pwm_base + mmap_seek));
+				val = *((unsigned int *) ((unsigned char *)a310b_gpio_info_t.pwm_base + mmap_seek));
 			else
 				printf("readR: mmap_base %x is error!\n", mmap_base);
 
@@ -5937,37 +5937,37 @@ void writeR(unsigned int val, unsigned int addr)
 
 			// gpio
 			if(mmap_base == A310B_GPIO_BASE_GROUP0)
-				*((unsigned int *) (a310b_gpio_info_t.gpio_base_group0 + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.gpio_base_group0 + mmap_seek)) = val;
 			else if(mmap_base == A310B_GPIO_BASE_GROUP1)
-				*((unsigned int *) (a310b_gpio_info_t.gpio_base_group1 + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.gpio_base_group1 + mmap_seek)) = val;
 			else if(mmap_base == A310B_GPIO_BASE_GROUP2)
-				*((unsigned int *) (a310b_gpio_info_t.gpio_base_group2 + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.gpio_base_group2 + mmap_seek)) = val;
 			else if(mmap_base == A310B_GPIO_BASE_GROUP3)
-				*((unsigned int *) (a310b_gpio_info_t.gpio_base_group3 + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.gpio_base_group3 + mmap_seek)) = val;
 			else if(mmap_base == A310B_GPIO_BASE_GROUP4)
-				*((unsigned int *) (a310b_gpio_info_t.gpio_base_group4 + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.gpio_base_group4 + mmap_seek)) = val;
 			else if(mmap_base == 0x160000)
-				*((unsigned int *) (a310b_gpio_info_t.gpio_base_group5 + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.gpio_base_group5 + mmap_seek)) = val;
 			else if(mmap_base == 0x150000)
-				*((unsigned int *) (a310b_gpio_info_t.gpio_base_group7 + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.gpio_base_group7 + mmap_seek)) = val;
 			// iomux
 			else if(mmap_base == A310B_IOMUX_BASE_GROUP0)
-				*((unsigned int *) (a310b_gpio_info_t.iomux_base_group0 + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.iomux_base_group0 + mmap_seek)) = val;
 			else if(mmap_base == A310B_IOMUX_BASE_GROUP1)
-				*((unsigned int *) (a310b_gpio_info_t.iomux_base_group1 + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.iomux_base_group1 + mmap_seek)) = val;
 			else if(mmap_base == A310B_IOMUX_BASE_GROUP2)
-				*((unsigned int *) (a310b_gpio_info_t.iomux_base_group2 + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.iomux_base_group2 + mmap_seek)) = val;
 			else if(mmap_base == A310B_IOMUX_BASE_GROUP3)
-				*((unsigned int *) (a310b_gpio_info_t.iomux_base_group3 + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.iomux_base_group3 + mmap_seek)) = val;
 			else if(mmap_base == A310B_IOMUX_BASE_GROUP4)
-				*((unsigned int *) (a310b_gpio_info_t.iomux_base_group4 + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.iomux_base_group4 + mmap_seek)) = val;
 			else if(mmap_base == 0x1d0000)
-				*((unsigned int *) (a310b_gpio_info_t.iomux_base_group5 + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.iomux_base_group5 + mmap_seek)) = val;
 			else if(mmap_base == 0x140000)
-				*((unsigned int *) (a310b_gpio_info_t.iomux_base_group7 + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.iomux_base_group7 + mmap_seek)) = val;
 			// pwm
 			else if(mmap_base == A310B_PWM_BASE)
-				*((unsigned int *) (a310b_gpio_info_t.pwm_base + mmap_seek)) = val;
+				*((unsigned int *) ((unsigned char *)a310b_gpio_info_t.pwm_base + mmap_seek)) = val;
 			else
 				printf("writeR: mmap_base %x is error!\n", mmap_base);
 
@@ -6014,6 +6014,7 @@ int orangepi_get_gpio_mode(int pin)
 	unsigned int iomux_val = 0; 			//for ai pro
 	unsigned int iomux_phyaddr = 0, gpio_dir_phyaddr = 0;	//for ai pro
 	unsigned int offset, shift;
+	unsigned int doen, reg_doen;
 
 	switch (OrangePiModel)
 	{
@@ -6285,9 +6286,9 @@ int orangepi_get_gpio_mode(int pin)
                                                 gpio_dir_phyaddr = (unsigned int)A310B_GPIO_BASE_GROUP7 + A310B_GPIO_DIRECTION_OFFSET;
 
                                                 if (index == 1)
-                                                        iomux_phyaddr = A310B_IOMUX_BASE_GROUP7;
+                                                        iomux_phyaddr = (unsigned int)A310B_IOMUX_BASE_GROUP7;
                                                 else if (index >= 2 && index <= 13)
-                                                        iomux_phyaddr = A310B_IOMUX_BASE_GROUP7 + 0x30 + (index - 2) * 4;
+                                                        iomux_phyaddr = (unsigned int)A310B_IOMUX_BASE_GROUP7 + 0x30 + (index - 2) * 4;
 
                                                 if (index == 1)
                                                         iomux_val = 0;
@@ -6318,8 +6319,7 @@ int orangepi_get_gpio_mode(int pin)
 			if (ORANGEPI_PIN_MASK[bank][index] != -1) {
 				offset = 4 * (pin / 4);
 				shift  = 8 * (pin % 4);
-				unsigned int doen;
-				unsigned int reg_doen = JH7110_SYS_IOMUX_BASE + JH7110_SYS_DOEN_REG_BASE + offset;
+				reg_doen = JH7110_SYS_IOMUX_BASE + JH7110_SYS_DOEN_REG_BASE + offset;
 
 				doen = readR(reg_doen);
 				doen = (doen >> shift) & JH7110_DOEN_MASK;
@@ -6569,6 +6569,7 @@ void rk3588_set_pwm_reg(int pin, rk3588_soc_info * rk3588_soc_info_ptr)
 					printf("You can select wiringPi pin 2/5/6/7/17/18/21/22 for PWM pin.\n");
 					break;
 				case PI_MODEL_5_MAX:
+				case PI_MODEL_5_ULTRA:
 					printf("You can select wiringPi pin 0/1/2/8/9/17/20/21/22/23 for PWM pin.\n");
 					break;
 				case PI_MODEL_CM5_TABLET:
@@ -6639,6 +6640,7 @@ int orangepi_set_gpio_mode(int pin, int mode)
 	unsigned int iomux_val = 0; //for ai pro
 	unsigned int iomux_phyaddr = 0, gpio_dir_phyaddr = 0; //for ai pro
 	unsigned int pwm_prd_default = 0; //for ai pro pwm
+	unsigned int dout, doen, dout_mask, doen_mask, reg_dout, reg_doen, reg_cfg;
 
 	switch (OrangePiModel)
 	{
@@ -7428,9 +7430,9 @@ int orangepi_set_gpio_mode(int pin, int mode)
 						gpio_dir_phyaddr = (unsigned int)A310B_GPIO_BASE_GROUP7 + A310B_GPIO_DIRECTION_OFFSET;
 
 						if (index == 1)
-							iomux_phyaddr = A310B_IOMUX_BASE_GROUP7;
+							iomux_phyaddr = (unsigned int)A310B_IOMUX_BASE_GROUP7;
 						else if (index >= 2 && index <= 13)
-							iomux_phyaddr = A310B_IOMUX_BASE_GROUP7 + 0x30 + (index - 2) * 4;
+							iomux_phyaddr = (unsigned int)A310B_IOMUX_BASE_GROUP7 + 0x30 + (index - 2) * 4;
 
 						if (index == 1)
 							iomux_val = 0;
@@ -7474,7 +7476,7 @@ int orangepi_set_gpio_mode(int pin, int mode)
 						printf("the pin you choose doesn't support hardware PWM\n");
 						printf("OPI:you can select wiringPi pin 33 for PWM pin\n");
 						printf("or you can use it in softPwm mode\n");
-						return;
+						return -1;
 					}
 
 					pwm_prd_default = 150000;
@@ -7507,12 +7509,11 @@ int orangepi_set_gpio_mode(int pin, int mode)
 
 		        offset = 4 * (pin / 4);
 			shift  = 8 * (pin % 4);
-			unsigned int dout, doen;
-			unsigned int dout_mask = JH7110_DOUT_MASK << shift;
-			unsigned int doen_mask = JH7110_DOEN_MASK << shift;
-			unsigned int reg_dout = JH7110_SYS_IOMUX_BASE + JH7110_SYS_DOUT_REG_BASE + offset;
-			unsigned int reg_doen = JH7110_SYS_IOMUX_BASE + JH7110_SYS_DOEN_REG_BASE + offset;
-			unsigned int reg_cfg = JH7110_SYS_IOMUX_BASE + JH7110_SYS_GPO_PDA_0_74_CFG + 4 * pin;
+			dout_mask = JH7110_DOUT_MASK << shift;
+			doen_mask = JH7110_DOEN_MASK << shift;
+			reg_dout = JH7110_SYS_IOMUX_BASE + JH7110_SYS_DOUT_REG_BASE + offset;
+			reg_doen = JH7110_SYS_IOMUX_BASE + JH7110_SYS_DOEN_REG_BASE + offset;
+			reg_cfg = JH7110_SYS_IOMUX_BASE + JH7110_SYS_GPO_PDA_0_74_CFG + 4 * pin;
 
 			if (ORANGEPI_PIN_MASK[bank][index] != -1) {
 				if (INPUT == mode) {
@@ -7697,6 +7698,7 @@ int orangepi_digitalWrite(int pin, int value)
 	unsigned int temp = 0;
 	unsigned int bit_enable = 0;
 	unsigned int offset;
+	unsigned int shift, dout_mask, reg_dout, dout, ddout;
 
 	switch (OrangePiModel)
 	{
@@ -8012,16 +8014,16 @@ int orangepi_digitalWrite(int pin, int value)
 			break;
 
 		case PI_MODEL_RV:
-			unsigned int dout = 0;
-			unsigned int offset = 4 * (pin / 4);
-			unsigned int shift  = 8 * (pin % 4);
-			unsigned int dout_mask = JH7110_DOUT_MASK << shift;
-			unsigned int reg_dout = JH7110_SYS_IOMUX_BASE + JH7110_SYS_DOUT_REG_BASE + offset;
+			dout = 0;
+			offset = 4 * (pin / 4);
+			shift  = 8 * (pin % 4);
+			dout_mask = JH7110_DOUT_MASK << shift;
+			reg_dout = JH7110_SYS_IOMUX_BASE + JH7110_SYS_DOUT_REG_BASE + offset;
 
 			dout <<= shift;
 
 			if (ORANGEPI_PIN_MASK[bank][index] != -1) {
-				unsigned int ddout = (value ? 1 : 0) << shift;
+				ddout = (value ? 1 : 0) << shift;
 
 				ddout |= readR(reg_dout) & ~dout_mask;
 				writeR(ddout, reg_dout);
